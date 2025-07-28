@@ -519,7 +519,17 @@ useEffect(() => {
       )}
 
       {etape5Validee && signaturesLoaded && (
-<div ref={pdfRef} id="pdf-content" style={{ padding: 20, backgroundColor: "white", color: "black" }}>
+<div
+  ref={pdfRef}
+  id="pdf-content"
+  style={{
+    padding: 20,
+    backgroundColor: "white",
+    color: "black",
+    maxWidth: 800,
+    overflow: "hidden"
+  }}
+>
 
           <h2>Récapitulatif du PV de convoyage</h2>
 
@@ -557,7 +567,7 @@ useEffect(() => {
           <p>Observations : {formData.observationsArrivee}</p>
 
       <h3>7. Signatures</h3>
-<div style={{ display: "flex", gap: 50 }}>
+<div style={{ display: "flex", gap: 50, width: 650, maxWidth: "100%" }}>
   <div>
     <p>Convoyeur :</p>
     <img
