@@ -523,11 +523,14 @@ useEffect(() => {
 <div
   ref={pdfRef}
   id="pdf-content"
-  className={isGeneratingPDF ? "pdf-export" : ""}
   style={{
     padding: 20,
     backgroundColor: "white",
-    color: "black"
+    color: "black",
+    maxWidth: 700,       // ← limite la largeur max sur desktop
+    width: "100vw",      // ← prend toute la largeur sur mobile
+    minHeight: "100vh",  // ← évite le PDF trop petit
+    boxSizing: "border-box"
   }}
 >
 
