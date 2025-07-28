@@ -64,7 +64,6 @@ const [etape2Validee, setEtape2Validee] = useState(false);
   const [etape5Validee, setEtape5Validee] = useState(false);
   const pdfRef = useRef();
 const [signaturesLoaded, setSignaturesLoaded] = useState(false);
-const [isGeneratingPDF, setIsGeneratingPDF] = useState(false);
 
 
 
@@ -520,19 +519,8 @@ useEffect(() => {
       )}
 
       {etape5Validee && signaturesLoaded && (
-<div
-  ref={pdfRef}
-  id="pdf-content"
-  style={{
-    padding: 20,
-    backgroundColor: "white",
-    color: "black",
-    maxWidth: 700,       // ← limite la largeur max sur desktop
-    width: "100vw",      // ← prend toute la largeur sur mobile
-    minHeight: "100vh",  // ← évite le PDF trop petit
-    boxSizing: "border-box"
-  }}
->
+<div ref={pdfRef} id="pdf-content" style={{ padding: 20, backgroundColor: "white", color: "black" }}>
+
           <h2>Récapitulatif du PV de convoyage</h2>
 
           <h3>1. Convoyeur</h3>
