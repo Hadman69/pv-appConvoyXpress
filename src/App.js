@@ -64,6 +64,7 @@ const [etape2Validee, setEtape2Validee] = useState(false);
   const [etape5Validee, setEtape5Validee] = useState(false);
   const pdfRef = useRef();
 const [signaturesLoaded, setSignaturesLoaded] = useState(false);
+const [isGeneratingPDF, setIsGeneratingPDF] = useState(false);
 
 
 
@@ -522,12 +523,11 @@ useEffect(() => {
 <div
   ref={pdfRef}
   id="pdf-content"
+  className={isGeneratingPDF ? "pdf-export" : ""}
   style={{
     padding: 20,
     backgroundColor: "white",
-    color: "black",
-    maxWidth: 800,
-    overflow: "hidden"
+    color: "black"
   }}
 >
 

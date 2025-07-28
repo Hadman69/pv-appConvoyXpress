@@ -37,4 +37,35 @@
   }
 }
 
+/* ===============================
+   Styles spécifiques au PDF (mobile + desktop)
+   =============================== */
+#pdf-content {
+  max-width: 100vw;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  font-size: 3.8vw;  /* Adapté mobile, ajuste si besoin */
+  background: white;
+  color: black;
+  margin: 0 auto;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+/* Sur desktop : limite la largeur max à 700px */
+@media (min-width: 700px) {
+  #pdf-content {
+    max-width: 700px;
+    font-size: 16px;
+  }
+}
+
+/* Sur mobile : padding un peu réduit et police adaptée */
+@media (max-width: 700px) {
+  #pdf-content {
+    font-size: 13px;
+    padding: 6px;
+  }
+}
 
